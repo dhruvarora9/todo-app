@@ -17,11 +17,17 @@ tasks.forEach(addListItem);
 form?.addEventListener("submit", (e) => {
     e.preventDefault();
     if (input?.value == "" || input?.value == null) return;
-    const task: Task = {
-        id: uuidV4(),
-        title: input.value,
-        completed: false,
-        createdAt: new Date(),
+    // const task: Task = {
+    //     id: uuidV4(),
+    //     title: input.value,
+    //     completed: false,
+    //     createdAt: new Date(),
+    // };
+    const task : Task = {
+        id:"1",
+        title:"title",
+        completed:false,
+        createdAt:new Date(),
     };
     tasks.push(task);
     saveTasks();
