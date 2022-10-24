@@ -23,11 +23,17 @@ form?.addEventListener("submit", (e) => {
     //     completed: false,
     //     createdAt: new Date(),
     // };
-    const task : Task = {
-        id:"1",
-        title:"title",
-        completed:false,
-        createdAt:new Date(),
+    //  const task: Task = {
+    //     id: uuidV4(),
+    //     title: input.value,
+    //     completed: false,
+    //     createdAt: new Date(),
+    // };
+       const task: Task = {
+        id: "1",
+        title: "title",
+        completed: true,
+        createdAt: new Date(),
     };
     tasks.push(task);
     saveTasks();
@@ -42,15 +48,15 @@ function addListItem(task: Task) {
         task.completed = checkbox.checked;
         saveTasks();
     });
-    checkbox.type = "checkbox";
-    checkbox.checked = task.completed;
+    // checkbox.type = "checkbox";
+    // checkbox.checked = task.completed;
     label.append(checkbox, task.title);
-    item.append(label);
-    list?.append(item);
+    // item.append(label);
+    // list?.append(item);
 }
 
 const saveTasks = () => {
-    localStorage.setItem("TASKS", JSON.stringify(tasks));
+    // localStorage.setItem("TASKS", JSON.stringify(tasks));
 };
 
 function loadTasks(): Task[] {
